@@ -1,0 +1,17 @@
+{
+  "name": "fable-animations",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Code-driven animations, rendered to MP4.",
+  "type": "module",
+  "scripts": {
+    "preview": "node tools/serve.mjs",
+    "render": "node tools/render.mjs opus-birthday --crf 24",
+    "render:hq": "node tools/render.mjs opus-birthday --crf 17 --suffix -hq",
+    "render:4k": "node tools/render.mjs opus-birthday --scale 2 --crf 21 --suffix -4k",
+    "still": "node tools/render.mjs opus-birthday --still"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.2.1"
+  }
+}
